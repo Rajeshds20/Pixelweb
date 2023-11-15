@@ -1,0 +1,121 @@
+.mainbody{
+    background-color: rgb(34, 41, 41);
+}
+.box1,.box2,.box3,.box4,.box5{
+    height:fit-content;
+    width:70%;
+    padding:20px;
+    background-color: rgb(47, 44, 44);
+    border-radius: 10px;
+    border:1px solid rgb(235, 184, 96);
+    box-sizing: border-box;
+    box-shadow:5px 5px  rgb(150, 153, 108) ;
+    margin:auto;
+    text-align: justify;
+}
+h3{
+    color:#a21ee9;
+    font-family: serif;
+    
+}
+h5{
+    color:aliceblue;
+    font-family: serif;
+    
+}
+h4{
+    color:aliceblue;
+    font-family: serif;
+}
+.box1_1{
+    width:80%;
+    height:fit-content;
+    background-color: rgb(62, 55, 55);
+    margin:auto;
+    text-align: center;
+}
+i{
+    color:rgb(0, 157, 255);
+    font-family: serif;
+    text-align:justify;
+}
+
+ul{
+    color:red;
+    font-weight: bold;;
+}
+.box5content{
+    text-align: center;
+}
+
+.formbox{
+    height:fit-content;
+    width:70%;
+    padding:10px;
+    background-color: rgb(47, 44, 44);
+    border-radius: 10px;
+    border:1px solid rgb(235, 184, 96);
+    box-sizing: border-box;
+    box-shadow:5px 5px  rgb(150, 153, 108) ;
+    margin:auto;
+    text-align: center;
+}
+
+.label {
+	display: block;
+	font-size: larger;
+	color: white;
+	padding: 5px;
+}
+
+.input {
+	font-size: larger;
+	padding: 5px;
+	margin: 2px;
+    width: 60%;
+    border-radius: 10px;
+
+}
+
+.btn {
+	color: white;
+	background-color: skyblue;
+	border-radius: 5px;
+	font-size: larger;
+    display: block;
+	padding: 5px;
+	margin: 10px auto;
+}
+
+.messages {
+	display: flex;
+	justify-content: center;
+}
+
+.error {
+	display: block;
+	background-color: red;
+	color: white;
+	width: fit-content;
+	height: 50px;
+	padding: 5px;
+}
+
+.success {
+	display: block;
+	background-color: rgb(230, 211, 173);
+	color: black;
+	width: fit-content;
+	height: 50px;
+	padding: 5px;
+}
+
+h1{
+    font-family: algerian;
+    color:bisque;
+    font-size:500%;
+}
+
+.header1{
+    text-align: center;
+}

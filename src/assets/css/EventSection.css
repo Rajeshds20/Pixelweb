@@ -1,0 +1,109 @@
+.events {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.event {
+  margin: 10px;
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  transition: transform 0.3s ease-in-out;
+}
+
+.event:hover {
+  transform: scale(1.05);
+
+}
+
+.event {
+  margin: 10px;
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  transition: transform 0.3s ease-in-out;
+}
+
+.participate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card-body:hover .participate {
+  opacity: 1;
+}
+
+.pariticipate-button {
+  display: inline-block;
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+.participate-button:hover {
+  background-color: #2980b9;
+}
+
+.eventeach {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  max-width: 65%;
+}
+
+.eventeach:hover {
+  transform: scale(1.05);
+}
+
+.card-img-top {
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  color: #555;
+}
+
+.participate {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.participate-button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.participate-button:hover {
+  background-color: #2980b9;
+}
