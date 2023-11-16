@@ -2,6 +2,9 @@
 // import './CoordinatorsSection.css'; // Assuming you have a CSS file for styling
 import "../assets/css/CoordinatorsSection.css";
 import { Tilt } from 'react-tilt'
+import Siva from '../assets/img/Siva.jpg';
+import Bharati from '../assets/img/bharati.png';
+import Saritha from '../assets/img/Saritha.jpg';
 
 
 const CoordinatorsSection = () => {
@@ -9,18 +12,18 @@ const CoordinatorsSection = () => {
     const facultyCoordinators = [
         {
             name: 'Prof. A.P.Siva Kumar',
-            designation: 'Prof, CSE',
-            image: 'https://picsum.photos/seed/picsum/400/400'
+            designation: 'Professor, CSE',
+            image: Siva
         },
         {
             name: 'Dr. K.F. Bharati',
             designation: 'HOD, CSE,',
-            image: 'https://pixel2023.com/images/bharati.png'
+            image: Bharati
         },
         {
             name: 'Dr. Jessica Saritha',
             designation: 'Asst. Prof, Dept of CSE',
-            image: 'https://picsum.photos/seed/picsum/400/400'
+            image: Saritha
         },
     ];
 

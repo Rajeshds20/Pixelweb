@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import '../../assets/css/eventPage.css'
 import { useState } from "react";
+import Coding from './posters/coding.jpg'
+
 function QuizPage() {
     // States for registration
     const [name, setName] = useState('');
@@ -141,6 +143,8 @@ function QuizPage() {
                 <h1>CODER CLASH</h1>
             </div>
             <br /><br />
+            <img style={{ width: '70%', marginLeft: '15%' }} className="brochureimg" src={Coding} alt="brochure" />
+            <br />
             <div className="box1">
                 <h3>About the Event</h3>
                 <br />

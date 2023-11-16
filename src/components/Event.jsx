@@ -15,8 +15,8 @@ const Event = ({ imageUrl = 'https://picsum.photos/seed/picsum/100/100', altText
             <img src={imageUrl} className="card-img-top" alt={event.title} />
 
             <div className="card-body">
-                <h5 className="card-title">{name}</h5>
-                <p className="card-text">{altText}</p>
+                {/* <h5 className="card-title">{name}</h5> */}
+                {/* <p className="card-text">{altText}</p> */}
                 <div className='participate'>
                     <button className='participate-button' /*src={event.Url}*/>Participate</button>
                 </div>

@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import '../../assets/css/eventPage.css'
 import { useState } from "react";
+import Chess from './posters/chess.jpg'
+
 function QuizPage() {
     // States for registration
     const [name, setName] = useState('');
@@ -144,9 +146,10 @@ function QuizPage() {
     return (
         <div className="mainbody">
             <div className="header1">
-                <h2>BATTLE ON BOARD</h2>
+                <h1>BATTLE ON BOARD</h1>
             </div>
             <br /><br />
+            <img style={{ width: '70%', marginLeft: '15%' }} className="brochureimg" src={Chess} alt="brochure" />
             <div className="box1">
                 <h3>About the Event</h3>
                 <br />

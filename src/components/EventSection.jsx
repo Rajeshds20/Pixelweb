@@ -21,13 +21,13 @@ const EventsSection = () => {
         },
         {
             name: 'Battle On Board',
-            imageUrl: 'https://picsum.photos/seed/picsum/200/100',
+            imageUrl: 'chess.jpeg',
             altText: 'Battle On Board',
             nav: 'chess'
         },
         {
             name: 'Gaming Arena',
-            imageUrl: 'https://picsum.photos/seed/picsum/200/100',
+            imageUrl: 'freefire.png',
             altText: 'Gaming Arena',
             nav: 'freefire'
         },
@@ -45,7 +45,7 @@ const EventsSection = () => {
         },
         {
             name: 'Memes',
-            imageUrl: 'https://picsum.photos/seed/picsum/200/100',
+            imageUrl: 'Memes.jpg',
             altText: 'Memes',
             nav: 'memes'
         },
