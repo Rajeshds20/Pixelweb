@@ -258,6 +258,11 @@ function QuizPage() {
                 <h3>Event Coordinators</h3>
                 <br />
                 <div className='box5content'>
+                    <h4>G. Aishwarya Reddy</h4>
+                    <h5>Phone: 9160421272</h5>
+                    <h5>Email: aishureddy535@gmail.com</h5>
+                </div>
+                <div className='box5content'>
                     <h4>D. Sri Varshitha</h4>
                     <h5>Phone: 7780741754</h5>
                     <h5>Email: srivarshithadulam2003@gmail.com</h5>
