@@ -61,10 +61,10 @@ const route = createBrowserRouter([
     path: '/events/quiz',
     element: <QuizPage />,
   },
-  {
-    path: '/events/:event',
-    element: <EventsPage event />,
-  },
+  // {
+  //   path: '/events/:event',
+  //   element: <EventsPage event />,
+  // },
   {
     path: '/admin',
     element: <AdminPage />,
