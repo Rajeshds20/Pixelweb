@@ -33,7 +33,7 @@ const LogoSection = () => {
             {/* Pixel Date and Venue, makers details with bootstrap class styles */}
             <div className='date-venue'>
                 <h2 className='date-venue-heading'>Venue Details</h2>
-                <h4 className='date'>Date: 24th & 25th November 2023</h4>
+                <h4 className='date'>Date: 25th & 26th November 2023</h4>
                 <h4 className='venue'>Venue: CSE, JNTUA College of Engineering, Anantapur</h4>
                 <h4 className='makers'>Made with ❤️ by <a href='/'>Team Pixel</a></h4>
             </div>

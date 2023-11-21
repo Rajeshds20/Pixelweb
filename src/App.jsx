@@ -41,10 +41,10 @@ const route = createBrowserRouter([
     path: '/events/freefire',
     element: <FreefirePage />,
   },
-  {
-    path: '/events/hackathon',
-    element: <HackathonPage />,
-  },
+  // {
+  //   path: '/events/hackathon',
+  //   element: <HackathonPage />,
+  // },
   {
     path: '/events/memes',
     element: <MemesPage />,

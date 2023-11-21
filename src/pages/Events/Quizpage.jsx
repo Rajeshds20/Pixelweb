@@ -50,6 +50,7 @@ function QuizPage() {
             body: JSON.stringify(data),
         }).then((res) => {
             console.log("Request complete! response:", res);
+            alert("Registration Successful");
         }).catch((err) => {
             console.log(err);
             alert("An error occured while submitting the form, if payment done, please contact the coordinators");
@@ -107,12 +108,15 @@ function QuizPage() {
             setSubmitted(true);
             setName(data.name);
             // Sending the form data to the backend
-            if (data.size == '1')
-                displayRazorpay(15000, data);
-            else if (data.size == '2')
-                displayRazorpay(25000, data);
-            else
-                displayRazorpay(35000, data);
+            // if (data.size == '1')
+            //     displayRazorpay(15000, data);
+            // else if (data.size == '2')
+            //     displayRazorpay(25000, data);
+            // else
+            //     displayRazorpay(35000, data);
+            // submitDetails(data);
+            submitDetails({ ...data, event: 'quiz' });
+            e.target.reset();
         }
     };
 
@@ -156,7 +160,7 @@ function QuizPage() {
                     Quiztopia, a contest in which participants test what they know by answering questions on one or more topics.You will be given a set of technical questions that are chosen by our team and you are expected to answer those correctly.You will be competing against many others.The one who answers the more questions will win the exciting prizes...
                 </h5>
                 <br />
-                <h5>This is an online event and a <i>Single Person</i> event</h5>
+                <h5>This is an offline event and a <i>Single/Team based</i> event</h5>
                 <br /><br />
                 <div className="box1_1">
                     <div className='box1_1content'>
@@ -182,8 +186,8 @@ function QuizPage() {
                 <h3>Registration Process</h3>
                 <br />
                 <ul>
-                    <li><h5>Anyone can participate</h5></li>
-                    <li><h5>Every team needs to pay the amount for registration</h5></li>
+                    <li><h5>Any individual or team can participate</h5></li>
+                    <li><h5>Every team needs to pay the amount specified above for registration</h5></li>
                     <li><h5>Register here using the link below</h5></li>
                 </ul>
             </div>
@@ -247,7 +251,7 @@ function QuizPage() {
                 <br />
                 <ul color='aliceblue'>
                     <li><h5>Questions will be restricted to Computer Science Engineering</h5></li>
-                    <li><h5>The one who provides the most correct answers will bbe declared as winner</h5></li>
+                    <li><h5>The one who provides the most correct answers will be declared as winner</h5></li>
                     <li><h5>If scores are levelled,they will have another round</h5></li>
                 </ul>
             </div >

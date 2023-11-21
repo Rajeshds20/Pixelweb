@@ -49,6 +49,7 @@ function QuizPage() {
             body: JSON.stringify(data),
         }).then((res) => {
             console.log("Request complete! response:", res);
+            alert("Registration Successful");
         }).catch((err) => {
             console.log(err);
             alert("An error occured while submitting the form, if payment done, please contact the coordinators");
@@ -107,12 +108,15 @@ function QuizPage() {
             setSubmitted(true);
             setName(data.name);
             // Sending the form data to the backend
-            if (data.size == '1')
-                displayRazorpay(5000, data);
-            else if (data.size == '2')
-                displayRazorpay(9000, data);
-            else
-                displayRazorpay(18000, data);
+            // if (data.size == '1')
+            //     displayRazorpay(5000, data);
+            // else if (data.size == '2')
+            //     displayRazorpay(9000, data);
+            // else
+            //     displayRazorpay(18000, data);
+            // submitDetails(data);
+            submitDetails({ ...data, event: 'freefire' });
+            e.target.reset();
         }
     };
 
@@ -156,16 +160,16 @@ function QuizPage() {
                     Gaming Arena, is a competetion where the participant should play the battle royale games either individually or group together and the one who survives till the end will be declared as winner.
                 </h5>
                 <br />
-                <h5>This is an online event and a <i>Single Person</i> event</h5>
+                <h5>This is an online event and a <i>Multiplayer team</i> event</h5>
                 <br /><br />
                 <div className="box1_1">
                     <div className='box1_1content'>
                         <h3>Date</h3>
-                        <h5>25th November,2023</h5>
+                        <h5>---</h5>
                         <br />
                         <h3>Prizes</h3>
-                        <h5>Rs.800 and
-                            Rs.350</h5>
+                        <h5>First Prize - Rs.800 <br />
+                            Seconde Prize - Rs.350</h5>
                         <hr style={{ color: "yellow" }} />
                         <h3>Rs.50/-</h3>
                         <h5>Team of 1 member</h5>
@@ -183,8 +187,9 @@ function QuizPage() {
                 <h3>Registration Process</h3>
                 <br />
                 <ul>
-                    <li><h5>Only individuals can participate</h5></li>
-                    <li><h5>An individual participants needs to pay an amount of 100 rupees</h5></li>
+                    <li><h5>Any individuals and teams can participate</h5></li>
+                    <li><h5>An individual participants needs to pay an amount of 50 rupees</h5></li>
+                    <li><h5>Squad needs to pay an amount of 180 rupees</h5></li>
                     <li><h5>Register here using the link below</h5></li>
                 </ul>
             </div>
@@ -248,15 +253,16 @@ function QuizPage() {
                 <h3>Event Rules</h3>
                 <br />
                 <ul color='aliceblue'>
-                    <li><h5>Questions will be restricted to Computer Science Engineering</h5></li>
-                    <li><h5>The one who provides the most correct answers will bbe declared as winner</h5></li>
-                    <li><h5>If scores are levelled,they will have another round</h5></li>
+                    {/* Sample rules for freefire gaming competetion */}
+                    <li><h5>The winning teams will be considered based on survival only</h5></li>
+                    <li><h5>Participants should not use any unfair means</h5></li>
+                    <li><h5>Participants should not use any hacks</h5></li>
                 </ul>
             </div >
             <br />
             <div className="box4">
                 <h5><i>Winners will receive exciting prizes...</i></h5>
-                <h5><i>Participation Certificates will be provided to every participant.</i></h5>
+                {/* <h5><i>Participation Certificates will be provided to every participant.</i></h5> */}
             </div >
             <br />
             <div className="box5">

@@ -41,7 +41,7 @@ const NavBar = () => {
                             <a className="dropdown-item" href="/events/coding">Coding</a>
                             <a className="dropdown-item" href="/events/paperpresentation">Paper Presentation</a>
                             <a className="dropdown-item" href="/events/memes">Memes</a>
-                            <a className="dropdown-item" href="/events/hackathon">Hackathon</a>
+                            <a className="dropdown-item" href="https://beehacks.club" target='_blank' rel="noreferrer">Hackathon</a>
                             <a className="dropdown-item" href="/events/quiz">Quiz</a>
                             <a className="dropdown-item" href="/events/photography">Photography</a>
                             <a className="dropdown-item" href="/events/chess">Chess</a>

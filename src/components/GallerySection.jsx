@@ -44,7 +44,10 @@
 // //     );
 // // };
 
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { useSwipeable } from "react-swipeable";
+import { useSpring, animated } from 'react-spring';
+
 
 // // export default GallerySection;
 
@@ -89,18 +92,44 @@ const Gallery = () => {
         setCurrentIndex(newIndex);
     };
 
+    const handlers = useSwipeable({
+        onSwipedLeft: () => goToNextSlide(),
+        onSwipedRight: () => goToPrevSlide(),
+        preventDefaultTouchmoveEvent: true,
+        trackMouse: true,
+    });
+
+    useEffect(() => {
+        const goToNextSlide = () => {
+            const newIndex = (currentIndex + 1) % images.length;
+            setCurrentIndex(newIndex);
+        };
+        const interval = setInterval(goToNextSlide, 3000); // Auto move every 3 seconds
+
+        return () => clearInterval(interval); // Cleanup on component unmount
+    }, [currentIndex]);
+
+    const transitions = useSpring({
+        opacity: 1,
+        from: { opacity: 0 },
+        reset: true,
+    });
+
     return (
-        <div style={{ marginBottom: '40px' }} className="carousel">
+        <div {...handlers} style={{ marginBottom: '40px' }} className="carousel">
             <h2 style={{ fontSize: '2.8rem', textAlign: 'center' }}>Gallery</h2>
             <div className="carousel-inner">
                 {images.map((image, index) => (
-                    <div
+                    <animated.div
                         key={index}
                         className={`carousel-item ${index === currentIndex ? 'active' : ''}`}
-                        style={{ opacity: index === currentIndex ? 1 : 0, transition: 'opacity 0.5s' }}
+                        style={{
+                            ...transitions,
+                            opacity: index === currentIndex ? 1 : 0, transition: 'opacity 0.5s'
+                        }}
                     >
                         <img src={image.src} alt={image.alt} />
-                    </div>
+                    </animated.div>
                 ))}
             </div>
             <button className="carousel-control prev" onClick={goToPrevSlide}>

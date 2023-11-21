@@ -49,6 +49,7 @@ function QuizPage() {
             body: JSON.stringify(data),
         }).then((res) => {
             console.log("Request complete! response:", res);
+            alert("Registration Successful");
         }).catch((err) => {
             console.log(err);
             alert("An error occured while submitting the form, if payment done, please contact the coordinators");
@@ -107,7 +108,10 @@ function QuizPage() {
             setSubmitted(true);
             setName(data.name);
             // Sending the form data to the backend
-            displayRazorpay(15000, data);
+            // displayRazorpay(15000, data);
+            // submitDetails(data);
+            submitDetails({ ...data, event: 'coding' });
+            e.target.reset();
         }
     };
 
@@ -152,7 +156,7 @@ function QuizPage() {
                     Coder Clash, a contest in which participantswill be given a set of problems to solve in a given time frame. The one who solves more problems will win the exciting prizes...
                 </h5>
                 <br />
-                <h5>This is an online event and a <i>Single Person</i> event</h5>
+                <h5>This is an offline event and a <i>Single Person</i> event</h5>
                 <br /><br />
                 <div className="box1_1">
                     <div className='box1_1content'>
@@ -173,7 +177,7 @@ function QuizPage() {
                 <br />
                 <ul>
                     <li><h5>Only individuals can participate</h5></li>
-                    <li><h5>An individual participants needs to pay an amount of 100 rupees</h5></li>
+                    <li><h5>An individual participants needs to pay an amount of 150 rupees</h5></li>
                     <li><h5>Register here using the link below</h5></li>
                 </ul>
             </div>
@@ -234,9 +238,9 @@ function QuizPage() {
                 <h3>Event Rules</h3>
                 <br />
                 <ul color='aliceblue'>
-                    <li><h5>Questions will be restricted to Computer Science Engineering</h5></li>
-                    <li><h5>The one who provides the most correct answers will bbe declared as winner</h5></li>
-                    <li><h5>If scores are levelled,they will have another round</h5></li>
+                    {/* Sample rules for coding competetion */}
+                    <li><h5>Participants should not use any unfair means</h5></li>
+                    <li><h5>Questions can be solved in any language</h5></li>
                 </ul>
             </div >
             <br />

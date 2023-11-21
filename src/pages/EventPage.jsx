@@ -259,7 +259,7 @@ function EventPage() {
                 <br />
                 <ul color='aliceblue'>
                     <li><h5>Questions will be restricted to Computer Science Engineering</h5></li>
-                    <li><h5>The one who provides the most correct answers will bbe declared as winner</h5></li>
+                    <li><h5>The one who provides the most correct answers will be declared as winner</h5></li>
                     <li><h5>If scores are levelled,they will have another round</h5></li>
                 </ul>
             </div >

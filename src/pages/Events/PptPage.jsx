@@ -50,6 +50,7 @@ function QuizPage() {
             body: JSON.stringify(data),
         }).then((res) => {
             console.log("Request complete! response:", res);
+            alert("Registration Successful");
         }).catch((err) => {
             console.log(err);
             alert("An error occured while submitting the form, if payment done, please contact the coordinators");
@@ -108,10 +109,13 @@ function QuizPage() {
             setSubmitted(true);
             setName(data.name);
             // Sending the form data to the backend
-            if (data.size === '1')
-                displayRazorpay(20000, data);
-            else
-                displayRazorpay(30000, data);
+            // if (data.size === '1')
+            //     displayRazorpay(20000, data);
+            // else
+            //     displayRazorpay(30000, data);
+            // submitDetails(data);
+            submitDetails({ ...data, event: 'paperpresentation' });
+            e.target.reset();
         }
     };
 
@@ -155,7 +159,7 @@ function QuizPage() {
                     Paper Presentation, is an event where participants present their research work in the form of a paper. The paper should be based on the theme of the event. The paper should be submitted to the coordinators before the deadline, and they shoud present it on the event day. The paper will be evaluated by the judges and the best paper will be awarded.
                 </h5>
                 <br />
-                <h5>This is an online event and a <i>Single Person</i> event</h5>
+                <h5>This is an offline event and a <i>Single Person/Team based</i> event</h5>
                 <br /><br />
                 <div className="box1_1">
                     <div className='box1_1content'>
@@ -178,8 +182,9 @@ function QuizPage() {
                 <h3>Registration Process</h3>
                 <br />
                 <ul>
-                    <li><h5>Only individuals can participate</h5></li>
-                    <li><h5>An individual participants needs to pay an amount of 100 rupees</h5></li>
+                    {/* <li><h5>Only individuals can participate</h5></li> */}
+                    <li><h5>An individual participants needs to pay an amount of 200 rupees</h5></li>
+                    <li><h5>A team of 2-4 participants needs to pay an amount of 300 rupees</h5></li>
                     <li><h5>Register here using the link below</h5></li>
                 </ul>
             </div>
@@ -243,9 +248,14 @@ function QuizPage() {
                 <h3>Event Rules</h3>
                 <br />
                 <ul color='aliceblue'>
-                    <li><h5>Questions will be restricted to Computer Science Engineering</h5></li>
-                    <li><h5>The one who provides the most correct answers will bbe declared as winner</h5></li>
-                    <li><h5>If scores are levelled,they will have another round</h5></li>
+                    {/* <li><h5>Questions will be restricted to Computer Science Engineering</h5></li>
+                    <li><h5>The one who provides the most correct answers will be declared as winner</h5></li>
+                    <li><h5>If scores are levelled,they will have another round</h5></li> */}
+                    {/* Sample rules for paper presentation competetion */}
+                    <li><h5>Participants should not use any unfair means</h5></li>
+                    <li><h5>Participants should submit their paper before the deadline</h5></li>
+                    <li><h5>Participants should present their paper on the event day</h5></li>
+                    <li><h5>Participants should be ready to answer the questions asked by the judges</h5></li>
                 </ul>
             </div >
             <br />
@@ -262,6 +272,8 @@ function QuizPage() {
                     <h5>Phone: 9160421272</h5>
                     <h5>Email: aishureddy535@gmail.com</h5>
                 </div>
+                <br />
+                <br />
                 <div className='box5content'>
                     <h4>D. Sri Varshitha</h4>
                     <h5>Phone: 7780741754</h5>

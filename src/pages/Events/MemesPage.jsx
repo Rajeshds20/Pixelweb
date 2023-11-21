@@ -50,6 +50,7 @@ function QuizPage() {
             body: JSON.stringify(data),
         }).then((res) => {
             console.log("Request complete! response:", res);
+            alert("Registration Successful");
         }).catch((err) => {
             console.log(err);
             alert("An error occured while submitting the form, if payment done, please contact the coordinators");
@@ -108,7 +109,10 @@ function QuizPage() {
             setSubmitted(true);
             setName(data.name);
             // Sending the form data to the backend
-            displayRazorpay(1000, data);
+            // displayRazorpay(1000, data);
+            // submitDetails(data);
+            submitDetails({ ...data, event: 'memes' });
+            e.target.reset();
         }
     };
 
@@ -162,11 +166,11 @@ function QuizPage() {
                         <h3>Time</h3>
                         <h5>......</h5>
                         <hr style={{ color: "yellow" }} />
-                        <h3>Rs.100/-</h3>
-                        <h5>Team of 1 member</h5>
-                        <hr style={{ color: "yellow" }} />
+                        <h3>Rs.50/-</h3>
+                        <h5>Individual Participant</h5>
+                        {/* <hr style={{ color: "yellow" }} />
                         <h3>Rs.200/-</h3>
-                        <h5>Team of 2-4 members</h5>
+                        <h5>Team of 2-4 members</h5> */}
                     </div>
                 </div>
             </div>
@@ -176,7 +180,7 @@ function QuizPage() {
                 <br />
                 <ul>
                     <li><h5>Only individuals can participate</h5></li>
-                    <li><h5>An individual participants needs to pay an amount of 100 rupees</h5></li>
+                    <li><h5>An individual participants needs to pay an amount of 50 rupees</h5></li>
                     <li><h5>Register here using the link below</h5></li>
                 </ul>
             </div>
@@ -237,15 +241,19 @@ function QuizPage() {
                 <h3>Event Rules</h3>
                 <br />
                 <ul color='aliceblue'>
-                    <li><h5>Questions will be restricted to Computer Science Engineering</h5></li>
-                    <li><h5>The one who provides the most correct answers will bbe declared as winner</h5></li>
-                    <li><h5>If scores are levelled,they will have another round</h5></li>
+                    {/* <li><h5>Questions will be restricted to Computer Science Engineering</h5></li>
+                    <li><h5>The one who provides the most correct answers will be declared as winner</h5></li>
+                    <li><h5>If scores are levelled,they will have another round</h5></li> */}
+                    {/* Sample rules for memes competetion */}
+                    <li><h5>Participants have to submit a meme which is made by them</h5></li>
+                    <li><h5>Based on voting and likes, the best will be selected as winner</h5></li>
+                    <li><h5>Participants should not copy the meme or idea and only submit their original</h5></li>
                 </ul>
             </div >
             <br />
             <div className="box4">
                 <h5><i>Winners will receive exciting prizes...</i></h5>
-                <h5><i>Participation Certificates will be provided to every participant.</i></h5>
+                {/* <h5><i>Participation Certificates will be provided to every participant.</i></h5> */}
             </div >
             <br />
             <div className="box5">
