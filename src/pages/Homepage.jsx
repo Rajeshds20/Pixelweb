@@ -17,7 +17,7 @@ function Homepage() {
             <LogoSection />
             <EventsSection />
             <GallerySection />
-            {/* <SponsorsSection /> */}
+            <SponsorsSection />
             <CoordinatorsSection />
             <ContactSection />
             {/* <Footer /> */}
