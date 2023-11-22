@@ -7,7 +7,7 @@ const SponsorsSection = () => {
         { src: 'gitam.jpg', name: 'Gouthami Institute of Technology and Management for Women, Proddutur', details: 'Womens College, Proddutur' },
         { src: 'cbit.png', name: 'CBIT, Proddutur ', details: 'Engineering College, Proddutur' },
         { src: 'nec_gudur.png', name: 'Narayana Engineering College, Gudur ', details: 'Engineering College, Gudur' },
-        { src: 'nec_nellore.png', name: 'Narayana Engineering, Nellore ', details: 'Engineering College, Gudur' },
+        { src: 'nec_nellore.png', name: 'Narayana Engineering College, Nellore ', details: 'Engineering College, Nellore' },
         { src: 'adisankarait.jpeg', name: 'Adisankara Institute of Technology, Gudur ', details: 'Engineering College, Gudur' },
 
         // Add more sponsors as needed
