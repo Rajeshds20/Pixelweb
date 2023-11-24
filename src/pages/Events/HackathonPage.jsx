@@ -191,8 +191,7 @@ function QuizPage() {
                     <h3>User Registration</h3>
                 </div>
                 <br />
-                <form onSubmit={handleSubmit}>
-                    {/* Labels and inputs for form data */}
+                {/* <form onSubmit={handleSubmit}>
                     <label className="label">Name</label>
                     <input required={true} name='name' className="input"
                         type="text" />
@@ -237,7 +236,8 @@ function QuizPage() {
                             loading ? "Loading..." : "Submit"
                         }
                     </button>
-                </form>
+                </form> */}
+                <h3 style={{ color: "red" }}>-- Registrations Closed --</h3>
             </div>
             <br />
 

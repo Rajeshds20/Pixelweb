@@ -9,6 +9,10 @@ const Event = ({ imageUrl = 'https://picsum.photos/seed/picsum/100/100', altText
         <div className="col-lg-4 col-md-6 col-sm-12 mb-4 eventeach"
             style={{ cursor: "pointer", display: 'flex', alignContent: 'center' }}
             onClick={() => {
+                if (nav == 'hackathon') {
+                    window.open('https://beehacks.club/', '_blank');
+                    return;
+                }
                 navigate(`/events/${nav}`);
             }}
         >
