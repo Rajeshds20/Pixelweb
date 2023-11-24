@@ -9,6 +9,7 @@ const SponsorsSection = () => {
         { src: 'nec_gudur.png', name: 'Narayana Engineering College, Gudur ', details: 'Engineering College, Gudur' },
         { src: 'nec_nellore.png', name: 'Narayana Engineering College, Nellore ', details: 'Engineering College, Nellore' },
         { src: 'adisankarait.jpeg', name: 'Adisankara Institute of Technology, Gudur ', details: 'Engineering College, Gudur' },
+        { src: 'srit_proddatur.jpg', name: 'SRIT, Proddatur', details: 'Engineering College, Proddatur' },
 
         // Add more sponsors as needed
     ]);
