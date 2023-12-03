@@ -57,9 +57,9 @@ const NavBar = () => {
                     <li className="nav-item">
                         <a className="nav-link" href="/faq">FAQ</a>
                     </li>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <a className="nav-link" href="/register">Register</a>
-                    </li>
+                    </li> */}
                     {/* <li className="nav-item">
                         <a className="nav-link disabled" href="#">Disabled</a>
                     </li> */}

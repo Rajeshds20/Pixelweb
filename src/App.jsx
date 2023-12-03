@@ -21,10 +21,10 @@ const route = createBrowserRouter([
     path: '/',
     element: <Homepage />,
   },
-  {
-    path: '/register',
-    element: <RegisterPage />,
-  },
+  // {
+  //   path: '/register',
+  //   element: <RegisterPage />,
+  // },
   {
     path: '/faq',
     element: <FAQPage />,
